@@ -20,8 +20,8 @@ int main(){
 
     // make unique random
     char order[5]={0,1,2,3,4};
-
-    for(int k = 4; k > 0 ;k--){/// left to right random input
+    int length = sizeof(order) / sizeof(order[0]);
+    for(int k = length-1; k > 0 ;k--){/// left to right random input
         int j = rand() % (k+1);// random
         int temp = order[j];
         order[j] = order[k];
